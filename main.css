@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    width: 100%;
+    background-color: #0D5047;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#navbar a {
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    opacity: 0.7;
+}
+
+#navbar a:hover {
+    background-color: #2D4671;
+    opacity: 1;
+}
+
+/* =============== Header Style ============== */
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #246B61;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". hello hello . . . . . . . . ."
+                         ". im im lorenzo lorenzo lorenzo lorenzo lorenzo lorenzo web web ."
+                         ". . . . . . . . . dev dev .";
+}
+
+#welcome-section div {
+    opacity: 0;
+}
+
+
+#hello {
+    grid-area: hello;
+    align-self: end;
+    justify-self: start;
+}
+
+#hello,
+#im {
+    font-size: 7.5vw;
+    opacity: 0.5;
+    animation: helloIm 2s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes helloIm {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+#im {
+    grid-area: im;
+    align-self: start;
+    justify-self: start;
+}
+
+#lorenzo {
+    grid-area: lorenzo;
+    font-size: 6vw;
+    font-weight: bolder;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    animation: lorenzo 2s 0.5s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes lorenzo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#web {
+    grid-area: web;
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 20px;
+}
+
+#web,
+#dev {
+    font-size: 5vw;
+    opacity: 0.5;
+    animation: webdev 2s 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes webdev {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+
+#dev {
+    grid-area: dev;
+    align-self: start;
+    justify-self: end;
+}
+
+
+/* ============== Skill Section Style ===========*/
+
+#skill {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0;
+}
+
+#s-icons {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#s-icons i {
+    font-size: 100px;
+    color: #246B61;
+}
+
+#skill p {
+    font-size: 50px;
+    font-family: Poppins, sans-serif;
+    opacity: 0.7;
+    text-align: center;
+}
+
+/* ============== Project Section Style ===========*/
+
+#Achievements {
+    width: 100%;
+    height: 1100px;
+    background-color: #2D4671;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr) 100px;
+    grid-template-areas: "ht ht"
+                         "tribute survey"
+                         "product documentation"
+                         ". .";
+    justify-items: center;
+    align-items: center;
+
+    
+}
+
+.project-tile {
+    width: 40vw;
+}
+
+.project-tile:hover .link-to-proj h3{
+    transform: translate(30px, 0);
+    opacity: 0.7;
+}
+
+.project-tile:hover {
+    opacity: 0.7;
+}
+
+.link-to-proj {
+    text-decoration: none;
+}
+
+.link-to-proj img {
+    width: 100%;
+}
+
+.link-to-proj h3 {
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+    transition: 0.6s cubic-bezier(.2,.94,.27,1.1);
+}
+
+#Achievements h2 {
+    grid-area: ht;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 60px;
+}
+
+#tribute {
+    grid-area: tribute;
+}
+
+#survey {
+    grid-area: survey;
+}
+
+#product {
+    grid-area: product;
+}
+
+#documentation {
+    grid-area: documentation;
+}
+
+/* ============== Contact Section Style ===========*/
+
+#contact {
+    width: 100%;
+    background-color: #0D5047;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 200px repeat(2, 100px);
+    justify-items: center;
+    align-items: center;
+}
+
+#engagement {
+    grid-column: span 3;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    margin: 35px 55px 75px 100px;
+}
+
+#contact div {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pf-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    padding: 30px;
+    opacity: 0.7;
+    transition: 0.5s cubic-bezier(.2,.94,.27,1.1);
+}
+
+.pf-links:hover {
+    transform: scale(0.9, 0.9);
+    opacity: 1;
+}
+
+.fa-github {
+    font-size: 20px;
+}
+
+.fa-free-code-camp {
+    font-size: 25px;
+}
+
+.pf-links p {
+    margin: 0 5px;
+}
+
+#contact span {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+#btt {
+    color: white;
+    text-decoration:none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.5;
+}
+
+#btt p {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+#arrow-up {
+    transition: 0.5s cubic-bezier(.2,.94,.27,1.1);
+}
+
+#btt:hover #arrow-up {
+    transform: translate(0 , -10px);
+}
+
+
+/* ====================================
+
+        Tablet and Mobile View 
+
+   ====================================*/
+
+@media (max-width: 800px) {
+
+    #navbar a {
+        font-size: 10px;
+    }
+
+/* =============== Header Style ============== */
+
+    #welcome-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: ".""hello"
+                             "im"
+                             "lorenzo"
+                             "web"
+                             "dev"".";
+    }
+
+    #hello {
+        align-self: end;
+    }
+
+    #im {
+        align-self: start;
+    }
+
+    #hello,
+    #im {
+        font-size: 9vw;
+        justify-self: center;
+        margin: 0 50px; 
+    }
+
+    #lorenzo {
+        font-size: 10vw;
+    }
+
+    #web {
+        align-self: end;
+    }
+
+    #dev {
+        align-self: start;
+    }
+    
+    #web,
+    #dev {
+        font-size: 7vw;
+        justify-self: center;
+        margin: 0 50px; 
+    }
+    
+    /* ============== Skill Section Style ===========*/
+    
+    #skill {
+        width: 100%;
+        height: auto;
+        padding: 50px;
+    }
+    
+    #s-icons {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    #s-icons i {
+        font-size: 15vw;
+    }
+    
+    #skill p {
+        font-size: 5vw;
+        margin: 5%;
+    }
+    
+    /* ============== Project Section Style ===========*/
+    
+    #Achievements {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px repeat(4, 1fr) 100px;
+        grid-template-areas: "ht"
+                             "tribute"
+                             "survey"
+                             "product" 
+                             "documentation"
+                             ".";
+    }
+    
+    .project-tile {
+        width: 90%;
+        height: 90%;
+        margin: 50px;
+    }
+    
+    #Achievements h2 {
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    #tribute {
+        grid-area: tribute;
+    }
+    
+    #survey {
+        grid-area: survey;
+    }
+    
+    #product {
+        grid-area: product;
+    }
+    
+    #documentation {
+        grid-area: documentation;
+    }
+    
+    /* ============== Contact Section Style ===========*/
+    
+    #contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px repeat(2, 100px);
+    }
+
+    #engagement {
+        grid-column: span 1;
+        font-size: 10vw;
+        font-weight: bold;
+    }
+    
+    #contact div {
+        grid-column: span 1;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+    }
+    
+    #contact span {
+        align-self: center;
+        margin-bottom: 10px;
+        grid-column: span 1;
+        justify-self: end;
+        margin: 0 10px;
+        opacity: 0.5;
+    }
+}
