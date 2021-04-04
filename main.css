@@ -181,6 +181,7 @@ html {
     grid-template-areas: "ht ht"
                          "tribute survey"
                          "product documentation"
+                         ". ."
                          ". .";
     justify-items: center;
     align-items: center;
@@ -221,7 +222,7 @@ html {
     grid-area: ht;
     color: white;
     font-family: Poppins, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 #tribute {
@@ -256,7 +257,7 @@ html {
     grid-column: span 3;
     color: white;
     font-family: Montserrat, sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     margin: 35px 55px 75px 100px;
 }
 
