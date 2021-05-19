@@ -5,7 +5,7 @@
 }
 
 html {
-    background-color: #fff;
+    background-color: #f4f5f6;
     color: #353d3f;
     font-family: 'Quicksand', 'Arial' , sans-serif;
     font-size: 20px;
@@ -16,13 +16,14 @@ html {
 .row {
     max-width: 1140px;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
     background-image: linear-gradient( rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url(img/background.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 600px;
     
 }
 .intro {
@@ -66,4 +67,39 @@ h1 {
     border-bottom: 2px solid #2d3436;
     font-weight: 600;
     font-size: 100%;
+}
+
+h2 {
+    font-size: 180%;
+}
+.about-section {
+    padding-top: 10px;
+}
+#about {
+    float: right;
+    margin: 2% 3% 0 0;
+    font-weight: 300;    
+}
+#about-body {
+    width: 40%;
+    font-weight: 500;
+    font-size: 70%;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    line-height: 20px;
+    float: right;
+    margin: 12% auto;
+    padding: 1% 1%;
+    border-radius: 10px;
+    border: 3px solid #2d34361a;
+}
+#imm {
+    width: 30%;
+    position: absolute;
+    top: 25%;
+}
+#profile-pic {
+    border-radius: 500px;
+    max-width:100%;
+    height:auto;
 }
