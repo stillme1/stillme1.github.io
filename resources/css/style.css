@@ -23,15 +23,17 @@ header {
     background-image: linear-gradient( rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)), url(img/background.jpg);
     background-size: cover;
     background-position: center;
-    height: 600px;
+    height: 100vh;
     
 }
 .intro {
     position: absolute;
-    width: 70%;
-    top: 40%;
-    left: 10%;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
     color: #fff;
+    /* border: 1px solid red; */
 }
 h1 {
     font-size: 240%;
